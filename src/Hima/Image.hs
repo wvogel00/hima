@@ -21,8 +21,8 @@ atatchImageHima h (_:imgs) = atatchImageHima h imgs
 
 atatchImageDoll :: Doll -> [Image] -> Picture
 atatchImageDoll _ [] = trace "obj" Blank
-atatchImageDoll d (Doll p a pic:imgs) = if fst d == p && snd d == a then trace "image success" pic else atatchImageDoll d imgs
-atatchImageDoll d (_:imgs) = trace "reading" $ atatchImageDoll d imgs
+atatchImageDoll d (Doll p a pic:imgs) = if fst d == p && snd d == a then pic else atatchImageDoll d imgs
+atatchImageDoll d (_:imgs) = atatchImageDoll d imgs
 
 assignType :: (FilePath, Maybe Picture) -> Image
 assignType (file, Just pic)

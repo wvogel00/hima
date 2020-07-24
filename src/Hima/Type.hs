@@ -25,8 +25,8 @@ initStatus = Status {
 width = 640 :: Int
 height = 480 :: Int
 
-left = -260 :: Float
-right = 260 :: Float
+left = -300 :: Float
+right = 200 :: Float
 top = 200 :: Float
 bottom = -200 :: Float
 
